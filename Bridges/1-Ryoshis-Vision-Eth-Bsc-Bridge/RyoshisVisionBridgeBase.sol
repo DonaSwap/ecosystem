@@ -1,9 +1,9 @@
-pragma solidity ^0.8.0;
+pragma solidity ^0.8.13;
 
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
 import './Itoken.sol';
 
-contract BridgeBase {
+contract RyoshisVisionBridgeBase {
   address public admin;
   IToken public token;
   uint public nonce;
