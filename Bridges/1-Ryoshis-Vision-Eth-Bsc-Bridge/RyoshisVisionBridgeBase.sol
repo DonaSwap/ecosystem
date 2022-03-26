@@ -1,11 +1,11 @@
 pragma solidity ^0.8.13;
 
 import '@openzeppelin/contracts/token/ERC20/IERC20.sol';
-import './Itoken.sol';
+import './RyoshisVisionItoken.sol';
 
 contract RyoshisVisionBridgeBase {
   address public admin;
-  IToken public token;
+  RyoshisVisionIToken public token;
   uint public nonce;
   mapping(uint => bool) public processedNonces;
 
@@ -21,7 +21,7 @@ contract RyoshisVisionBridgeBase {
 
   constructor(address _token) {
     admin = msg.sender;
-    token = IToken(_token);
+    token = RyoshisVisionIToken(_token);
   }
 
   function burn(address to, uint amount) external {
